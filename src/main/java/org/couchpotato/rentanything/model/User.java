@@ -9,26 +9,13 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "users")
-@NamedQuery(name = "User.findAll", query = "SELECT u FROM User u")
-public class User implements Serializable {
-	private static final long serialVersionUID = 1L;
-
-	@Id
-	private int id;
+public class User extends BaseModel implements Serializable  {
 
 	private String password;
 
 	private String username;
 
 	public User() {
-	}
-
-	public int getId() {
-		return this.id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	public String getPassword() {
