@@ -4,6 +4,7 @@
 
 package org.couchpotato.rentanything.model;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 import javax.persistence.Entity;
@@ -15,21 +16,21 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "items")
-public class Item extends BaseModel
+public class Item extends BaseModel implements Serializable
 {
 	private String title;
 	private String description;
-	private String typeId;
-	private String subtypeId;
+	private String type;
+	private String subtype;
 	private Integer availableQuantity;
-	private String color;
+	private String itemCondition;
 	private String currency;
 	private BigDecimal price;
 	private String priceUnit;
 	private String company;
 	private String model;
-	private String customerId;
-
+	private String userId;
+	private String placeId;
 	/**
 	 *
 	 */
@@ -90,24 +91,6 @@ public class Item extends BaseModel
 	}
 
 	/**
-	 * @return the color
-	 */
-	public String getColor()
-	{
-		return color;
-	}
-
-	/**
-	 * @param color
-	 *            the color to set
-	 */
-	public void setColor(String color)
-	{
-		this.color = color;
-	}
-
-
-	/**
 	 * @return the company
 	 */
 	public String getCompany()
@@ -141,70 +124,7 @@ public class Item extends BaseModel
 		this.model = model;
 	}
 
-	/**
-	 * @return the customerId
-	 */
-	public String getCustomerId()
-	{
-		return customerId;
-	}
 
-	/**
-	 * @param customerId
-	 *            the customerId to set
-	 */
-	public void setCustomerId(String customerId)
-	{
-		this.customerId = customerId;
-	}
-
-	/**
-	 * @return the typeId
-	 */
-	public String getTypeId()
-	{
-		return typeId;
-	}
-
-	/**
-	 * @param typeId the typeId to set
-	 */
-	public void setTypeId(String typeId)
-	{
-		this.typeId = typeId;
-	}
-
-	/**
-	 * @return the subtypeId
-	 */
-	public String getSubtypeId()
-	{
-		return subtypeId;
-	}
-
-	/**
-	 * @param subtypeId the subtypeId to set
-	 */
-	public void setSubtypeId(String subtypeId)
-	{
-		this.subtypeId = subtypeId;
-	}
-
-	/**
-	 * @return the currency
-	 */
-	public String getCurrency()
-	{
-		return currency;
-	}
-
-	/**
-	 * @param currency the currency to set
-	 */
-	public void setCurrency(String currency)
-	{
-		this.currency = currency;
-	}
 
 	/**
 	 * @return the price
@@ -215,7 +135,8 @@ public class Item extends BaseModel
 	}
 
 	/**
-	 * @param price the price to set
+	 * @param price
+	 *            the price to set
 	 */
 	public void setPrice(BigDecimal price)
 	{
@@ -231,12 +152,112 @@ public class Item extends BaseModel
 	}
 
 	/**
-	 * @param priceUnit the priceUnit to set
+	 * @param priceUnit
+	 *            the priceUnit to set
 	 */
 	public void setPriceUnit(String priceUnit)
 	{
 		this.priceUnit = priceUnit;
 	}
 
+	/**
+	 * @return the type
+	 */
+	public String getType()
+	{
+		return type;
+	}
+
+	/**
+	 * @param type
+	 *            the type to set
+	 */
+	public void setType(String type)
+	{
+		this.type = type;
+	}
+
+	/**
+	 * @return the subtype
+	 */
+	public String getSubtype()
+	{
+		return subtype;
+	}
+
+	/**
+	 * @param subtype
+	 *            the subtype to set
+	 */
+	public void setSubtype(String subtype)
+	{
+		this.subtype = subtype;
+	}
+
+	/**
+	 * @return the itemCondition
+	 */
+	public String getItemCondition()
+	{
+		return itemCondition;
+	}
+
+	/**
+	 * @param itemCondition
+	 *            the itemCondition to set
+	 */
+	public void setItemCondition(String itemCondition)
+	{
+		this.itemCondition = itemCondition;
+	}
+
+	/**
+	 * @return the currency
+	 */
+	public String getCurrency()
+	{
+		return currency;
+	}
+
+	/**
+	 * @param currency
+	 *            the currency to set
+	 */
+	public void setCurrency(String currency)
+	{
+		this.currency = currency;
+	}
+
+	/**
+	 * @return the placeId
+	 */
+	public String getPlaceId()
+	{
+		return placeId;
+	}
+
+	/**
+	 * @param placeId the placeId to set
+	 */
+	public void setPlaceId(String placeId)
+	{
+		this.placeId = placeId;
+	}
+
+	/**
+	 * @return the userId
+	 */
+	public String getUserId()
+	{
+		return userId;
+	}
+
+	/**
+	 * @param userId the userId to set
+	 */
+	public void setUserId(String userId)
+	{
+		this.userId = userId;
+	}
 
 }

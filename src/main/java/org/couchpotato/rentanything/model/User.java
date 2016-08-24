@@ -14,23 +14,88 @@ import javax.persistence.Table;
 @Table(name = "users")
 public class User extends BaseModel implements Serializable
 {
-
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = -6758748101732101374L;
-
 	private String password;
-
 	private String username;
+	private String firstName;
+	private String lastName;
+	private String email;
+	private String phone;
 
 	public User()
 	{
 	}
 
+	/**
+	 * @return the firstName
+	 */
+	public String getFirstName()
+	{
+		return firstName;
+	}
+
+	/**
+	 * @param firstName
+	 *            the firstName to set
+	 */
+	public void setFirstName(String firstName)
+	{
+		this.firstName = firstName;
+	}
+
+	/**
+	 * @return the lastName
+	 */
+	public String getLastName()
+	{
+		return lastName;
+	}
+
+	/**
+	 * @param lastName
+	 *            the lastName to set
+	 */
+	public void setLastName(String lastName)
+	{
+		this.lastName = lastName;
+	}
+
+	/**
+	 * @return the email
+	 */
+	public String getEmail()
+	{
+		return email;
+	}
+
+	/**
+	 * @param email
+	 *            the email to set
+	 */
+	public void setEmail(String email)
+	{
+		this.email = email;
+	}
+
+	/**
+	 * @return the phone
+	 */
+	public String getPhone()
+	{
+		return phone;
+	}
+
+	/**
+	 * @param phone
+	 *            the phone to set
+	 */
+	public void setPhone(String phone)
+	{
+		this.phone = phone;
+	}
+
 	public String getPassword()
 	{
-		return this.password;
+		return password;
 	}
 
 	public void setPassword(String password)
@@ -40,7 +105,7 @@ public class User extends BaseModel implements Serializable
 
 	public String getUsername()
 	{
-		return this.username;
+		return username;
 	}
 
 	public void setUsername(String username)

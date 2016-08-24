@@ -4,6 +4,8 @@
 
 package org.couchpotato.rentanything.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
@@ -13,7 +15,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "places")
-public class Place extends BaseModel
+public class Place extends BaseModel implements Serializable
 {
 	private String area;
 	private String city;

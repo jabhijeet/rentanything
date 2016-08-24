@@ -1,6 +1,7 @@
 
 package org.couchpotato.rentanything.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -8,7 +9,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "remarks")
-public class Remark extends BaseModel
+public class Remark extends BaseModel implements Serializable
 {
 	private String remarkText;
 	private String remarkByCustomerId;
