@@ -6,10 +6,15 @@ package org.couchpotato.rentanything.model;
 
 import java.math.BigDecimal;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 /**
  * @author jabhi
  *
  */
+@Entity
+@Table(name = "items")
 public class Item extends BaseModel
 {
 	private String title;

@@ -4,10 +4,15 @@
 
 package org.couchpotato.rentanything.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 /**
  * @author jabhi
  *
  */
+@Entity
+@Table(name = "places")
 public class Place extends BaseModel
 {
 	private String area;

@@ -4,10 +4,15 @@
 
 package org.couchpotato.rentanything.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 /**
  * @author jabhi
  *
  */
+@Entity
+@Table(name = "itemTypes")
 public class ItemType extends BaseModel
 {
 

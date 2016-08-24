@@ -3,15 +3,53 @@ package org.couchpotato.rentanything.model;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "remarks")
 public class Remark extends BaseModel
 {
 	private String remarkText;
 	private String remarkByCustomerId;
-	private Date date;
+	private Date createdDate;
+	private Date modifiedDate;
 	private String remarkType;
-	private String remarkRefId;
+	private String remarkForId;
 
 
+
+	/**
+	 * @return the createdDate
+	 */
+	public Date getCreatedDate()
+	{
+		return createdDate;
+	}
+
+	/**
+	 * @param createdDate the createdDate to set
+	 */
+	public void setCreatedDate(Date createdDate)
+	{
+		this.createdDate = createdDate;
+	}
+
+	/**
+	 * @return the modifiedDate
+	 */
+	public Date getModifiedDate()
+	{
+		return modifiedDate;
+	}
+
+	/**
+	 * @param modifiedDate the modifiedDate to set
+	 */
+	public void setModifiedDate(Date modifiedDate)
+	{
+		this.modifiedDate = modifiedDate;
+	}
 
 	/**
 	 *
@@ -38,26 +76,7 @@ public class Remark extends BaseModel
 		this.remarkText = remarkText;
 	}
 
-	/**
-	 * @return the date
-	 */
-	public Date getDate()
-	{
-		if (date != null)
-		{
-			return (Date) date.clone();
-		}
-		return null;
-	}
 
-	/**
-	 * @param date
-	 *            the date to set
-	 */
-	public void setDate(Date date)
-	{
-		this.date = date;
-	}
 
 	/**
 	 * @return the remarkByCustomerId
@@ -76,96 +95,6 @@ public class Remark extends BaseModel
 		this.remarkByCustomerId = remarkByCustomerId;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * @see java.lang.Object#toString()
-	 */
-	@Override
-	public String toString()
-	{
-		return "Remark ["
-				+ (remarkText != null ? "remarkText=" + remarkText + ", " : "")
-				+ (remarkByCustomerId != null
-				? "remarkByCustomerId=" + remarkByCustomerId + ", "
-						: "")
-				+ (date != null ? "date=" + date : "") + "]";
-	}
-
-	/*
-	 * (non-Javadoc)
-	 * @see java.lang.Object#hashCode()
-	 */
-	@Override
-	public int hashCode()
-	{
-		final int prime = 31;
-		int result = super.hashCode();
-		result = (prime * result) + ((date == null) ? 0 : date.hashCode());
-		result = (prime * result) + ((remarkByCustomerId == null) ? 0
-				: remarkByCustomerId.hashCode());
-		result = (prime * result)
-				+ ((remarkText == null) ? 0 : remarkText.hashCode());
-		return result;
-	}
-
-	/*
-	 * (non-Javadoc)
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
-	@Override
-	public boolean equals(Object obj)
-	{
-		if (this == obj)
-		{
-			return true;
-		}
-		if (!super.equals(obj))
-		{
-			return false;
-		}
-		if (!(obj instanceof Remark))
-		{
-			return false;
-		}
-		final Remark other = (Remark) obj;
-		if (date == null)
-		{
-			if (other.date != null)
-			{
-				return false;
-			}
-		}
-		else
-			if (!date.equals(other.date))
-			{
-				return false;
-			}
-		if (remarkByCustomerId == null)
-		{
-			if (other.remarkByCustomerId != null)
-			{
-				return false;
-			}
-		}
-		else
-			if (!remarkByCustomerId.equals(other.remarkByCustomerId))
-			{
-				return false;
-			}
-		if (remarkText == null)
-		{
-			if (other.remarkText != null)
-			{
-				return false;
-			}
-		}
-		else
-			if (!remarkText.equals(other.remarkText))
-			{
-				return false;
-			}
-		return true;
-	}
 
 	/**
 	 * @return the remarkType
@@ -186,17 +115,17 @@ public class Remark extends BaseModel
 	/**
 	 * @return the remarkRefId
 	 */
-	public String getRemarkRefId()
+	public String getRemarkForId()
 	{
-		return remarkRefId;
+		return remarkForId;
 	}
 
 	/**
 	 * @param remarkRefId the remarkRefId to set
 	 */
-	public void setRemarkRefId(String remarkRefId)
+	public void setRemarkForId(String remarkForId)
 	{
-		this.remarkRefId = remarkRefId;
+		this.remarkForId = remarkForId;
 	}
 
 }
