@@ -4,11 +4,7 @@
 
 package org.couchpotato.rentanything.model;
 
-import java.util.List;
-
-import org.couchpotato.rentanything.common.Amount;
-import org.couchpotato.rentanything.common.ItemSubType;
-import org.couchpotato.rentanything.common.ItemType;
+import java.math.BigDecimal;
 
 /**
  * @author jabhi
@@ -18,15 +14,16 @@ public class Item extends BaseModel
 {
 	private String title;
 	private String description;
-	private ItemType type;
-	private ItemSubType subtype;
+	private String typeId;
+	private String subtypeId;
 	private Integer availableQuantity;
 	private String color;
-	private Amount price;
+	private String currency;
+	private BigDecimal price;
+	private String priceUnit;
 	private String company;
 	private String model;
 	private String customerId;
-	private List<String> feedbackIds;
 
 	/**
 	 *
@@ -71,40 +68,6 @@ public class Item extends BaseModel
 	}
 
 	/**
-	 * @return the type
-	 */
-	public ItemType getType()
-	{
-		return type;
-	}
-
-	/**
-	 * @param type
-	 *            the type to set
-	 */
-	public void setType(ItemType type)
-	{
-		this.type = type;
-	}
-
-	/**
-	 * @return the subtype
-	 */
-	public ItemSubType getSubtype()
-	{
-		return subtype;
-	}
-
-	/**
-	 * @param subtype
-	 *            the subtype to set
-	 */
-	public void setSubtype(ItemSubType subtype)
-	{
-		this.subtype = subtype;
-	}
-
-	/**
 	 * @return the availableQuantity
 	 */
 	public Integer getAvailableQuantity()
@@ -138,22 +101,6 @@ public class Item extends BaseModel
 		this.color = color;
 	}
 
-	/**
-	 * @return the price
-	 */
-	public Amount getPrice()
-	{
-		return price;
-	}
-
-	/**
-	 * @param price
-	 *            the price to set
-	 */
-	public void setPrice(Amount price)
-	{
-		this.price = price;
-	}
 
 	/**
 	 * @return the company
@@ -198,7 +145,8 @@ public class Item extends BaseModel
 	}
 
 	/**
-	 * @param customerId the customerId to set
+	 * @param customerId
+	 *            the customerId to set
 	 */
 	public void setCustomerId(String customerId)
 	{
@@ -206,21 +154,84 @@ public class Item extends BaseModel
 	}
 
 	/**
-	 * @return the feedbackIds
+	 * @return the typeId
 	 */
-	public List<String> getFeedbackIds()
+	public String getTypeId()
 	{
-		return feedbackIds;
+		return typeId;
 	}
 
 	/**
-	 * @param feedbackIds the feedbackIds to set
+	 * @param typeId the typeId to set
 	 */
-	public void setFeedbackIds(List<String> feedbackIds)
+	public void setTypeId(String typeId)
 	{
-		this.feedbackIds = feedbackIds;
+		this.typeId = typeId;
 	}
 
+	/**
+	 * @return the subtypeId
+	 */
+	public String getSubtypeId()
+	{
+		return subtypeId;
+	}
+
+	/**
+	 * @param subtypeId the subtypeId to set
+	 */
+	public void setSubtypeId(String subtypeId)
+	{
+		this.subtypeId = subtypeId;
+	}
+
+	/**
+	 * @return the currency
+	 */
+	public String getCurrency()
+	{
+		return currency;
+	}
+
+	/**
+	 * @param currency the currency to set
+	 */
+	public void setCurrency(String currency)
+	{
+		this.currency = currency;
+	}
+
+	/**
+	 * @return the price
+	 */
+	public BigDecimal getPrice()
+	{
+		return price;
+	}
+
+	/**
+	 * @param price the price to set
+	 */
+	public void setPrice(BigDecimal price)
+	{
+		this.price = price;
+	}
+
+	/**
+	 * @return the priceUnit
+	 */
+	public String getPriceUnit()
+	{
+		return priceUnit;
+	}
+
+	/**
+	 * @param priceUnit the priceUnit to set
+	 */
+	public void setPriceUnit(String priceUnit)
+	{
+		this.priceUnit = priceUnit;
+	}
 
 
 }

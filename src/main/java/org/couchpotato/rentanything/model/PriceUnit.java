@@ -2,22 +2,21 @@
  *
  */
 
-package org.couchpotato.rentanything.common;
+package org.couchpotato.rentanything.model;
 
 /**
  * @author jabhi
  *
  */
-public enum PriceUnit
+public class PriceUnit extends BaseModel
 {
-	PER_DAY("per Day"), PER_HOUR("per Hour"), PER_WEEK("per Week"), PER_MONTH(
-			"per Month");
+
 	private final String description;
 
 	/**
 	 * @param description
 	 */
-	private PriceUnit(String description)
+	public PriceUnit(String description)
 	{
 		this.description = description;
 	}

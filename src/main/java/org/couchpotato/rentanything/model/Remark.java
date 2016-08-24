@@ -8,6 +8,8 @@ public class Remark extends BaseModel
 	private String remarkText;
 	private String remarkByCustomerId;
 	private Date date;
+	private String remarkType;
+	private String remarkRefId;
 
 
 
@@ -41,7 +43,7 @@ public class Remark extends BaseModel
 	 */
 	public Date getDate()
 	{
-		if (this.date != null)
+		if (date != null)
 		{
 			return (Date) date.clone();
 		}
@@ -163,6 +165,38 @@ public class Remark extends BaseModel
 				return false;
 			}
 		return true;
+	}
+
+	/**
+	 * @return the remarkType
+	 */
+	public String getRemarkType()
+	{
+		return remarkType;
+	}
+
+	/**
+	 * @param remarkType the remarkType to set
+	 */
+	public void setRemarkType(String remarkType)
+	{
+		this.remarkType = remarkType;
+	}
+
+	/**
+	 * @return the remarkRefId
+	 */
+	public String getRemarkRefId()
+	{
+		return remarkRefId;
+	}
+
+	/**
+	 * @param remarkRefId the remarkRefId to set
+	 */
+	public void setRemarkRefId(String remarkRefId)
+	{
+		this.remarkRefId = remarkRefId;
 	}
 
 }

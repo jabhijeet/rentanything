@@ -4,8 +4,6 @@
 
 package org.couchpotato.rentanything.model;
 
-import java.util.List;
-
 /**
  * @author jabhi
  *
@@ -15,10 +13,7 @@ public class Customer extends BaseModel
 	private String firstname;
 	private String lastname;
 	private String placeId;
-	private List<String> remarkIds;
-
-
-
+	private String userId;
 	/**
 	 *
 	 */
@@ -78,20 +73,21 @@ public class Customer extends BaseModel
 		this.placeId = placeId;
 	}
 
+
 	/**
-	 * @return the remarkIds
+	 * @return the userId
 	 */
-	public List<String> getRemarkIds()
+	public String getUserId()
 	{
-		return remarkIds;
+		return userId;
 	}
 
 	/**
-	 * @param remarkIds the remarkIds to set
+	 * @param userId the userId to set
 	 */
-	public void setRemarkIds(List<String> remarkIds)
+	public void setUserId(String userId)
 	{
-		this.remarkIds = remarkIds;
+		this.userId = userId;
 	}
 
 	/* (non-Javadoc)

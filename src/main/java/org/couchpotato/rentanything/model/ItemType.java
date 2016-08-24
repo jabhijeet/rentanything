@@ -2,20 +2,18 @@
  *
  */
 
-package org.couchpotato.rentanything.common;
+package org.couchpotato.rentanything.model;
 
 /**
  * @author jabhi
  *
  */
-public enum ItemType
+public class ItemType extends BaseModel
 {
 
-	ELECTRONICS("Electronics"), AUTOMOBILES("Automobiles"), SPORTING_GEARS(
-			"Sporting Gears"), BOOKS("Books"), MISC("Miscellaneous");
 	private final String description;
 
-	private ItemType(String description)
+	public ItemType(String description)
 	{
 		this.description = description;
 	}

@@ -1,5 +1,5 @@
 
-package org.couchpotato.rentanything.common;
+package org.couchpotato.rentanything.model;
 
 import java.math.BigDecimal;
 
